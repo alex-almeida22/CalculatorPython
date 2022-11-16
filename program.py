@@ -17,26 +17,75 @@ def selectionFunction(selection):
     match selection:
         case "1":
             num1 = input("\nMeta um número: ")
-            num2 = input("\nMeta outro número: ")
-            addition(num1, num2)
+            if(num1.isnumeric()):
+                num2 = input("\nMeta outro número: ")
+                if(num2.isnumeric()):
+                    addition(num1, num2)
+                else:
+                    print("Segundo Número Inválido. Tente Novamente!")
+                    program()
+            else:
+                print("Primeiro Número Inválido. Tente Novamente!")
+                program()
         case "2":
             num1 = input("\nMeta um número: ")
-            num2 = input("\nMeta outro número: ")
-            subtraction(num1, num2)
+            if(num1.isnumeric()):
+                num2 = input("\nMeta outro número: ")
+                if(num2.isnumeric()):
+                    subtraction(num1, num2)
+                else:
+                    print("Segundo Número Inválido. Tente Novamente!")
+                    program()
+            else:
+                print("Primeiro Número Inválido. Tente Novamente!")
+                program()
+            
         case "3":
             num1 = input("\nMeta um número: ")
-            num2 = input("\nMeta outro número: ")
-            multiplication(num1, num2)
+            if(num1.isnumeric()):
+                num2 = input("\nMeta outro número: ")
+                if(num2.isnumeric()):
+                    multiplication(num1, num2)
+                else:
+                    print("Segundo Número Inválido. Tente Novamente!")
+                    program()
+            else:
+                print("Primeiro Número Inválido. Tente Novamente!")
+                program()
+            
         case "4":
             num1 = input("\nMeta um número: ")
-            num2 = input("\nMeta outro número: ")
-            division(num1, num2)
+            if(num1.isnumeric()):
+                num2 = input("\nMeta outro número: ")
+                if(num2.isnumeric()):
+                    division(num1, num2)
+                else:
+                    print("Segundo Número Inválido. Tente Novamente!")
+                    program()
+            else:
+                print("Primeiro Número Inválido. Tente Novamente!")
+                program()
+            
         case "5":
             num1 = input("\nMeta um número: ")
-            num2 = input("\nMeta outro número: ")
-            powerOf(num1, num2)
+            if(num1.isnumeric()):
+                num2 = input("\nMeta outro número: ")
+                if(num2.isnumeric()):
+                    powerOf(num1, num2)
+                else:
+                    print("Segundo Número Inválido. Tente Novamente!")
+                    program()
+            else:
+                print("Primeiro Número Inválido. Tente Novamente!")
+                program()
+            
         case "6":
             num = input("\nMeta um número: ")
+            if(num.isnumeric()):
+                squareRoot(num)   
+            else:
+                print("Número Inválido. Tente Novamente!")
+                program()
             squareRoot(num)   
         case "0":
             print("Tenha um bom dia :)")
@@ -61,8 +110,11 @@ def multiplication(num1, num2):
     program()
 
 def division(num1, num2):
-    val = float(num1) / float(num2)
-    print("Resultado: " + str(val))
+    if(num2 == 0):
+        print("Divisão por 0 é impossível. Tente Novamente!")
+    else:
+        val = float(num1) / float(num2)
+        print("Resultado: " + str(val))
     program()
 
 def powerOf(num1, num2):
